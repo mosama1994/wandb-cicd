@@ -7,6 +7,7 @@ jobs:
     steps:
       - id: step1
         run: |
+          import os
           with open(os.environ['GITHUB_OUTPUT'],a) as f:
             print(f'VAL=true', file=f)
         shell: python
