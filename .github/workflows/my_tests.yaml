@@ -18,4 +18,3 @@ jobs:
         run: |
           pip install -U pytest
           pytest my_test_code/
-        shell: python
