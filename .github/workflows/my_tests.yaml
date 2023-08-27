@@ -1,0 +1,21 @@
+name: "Testing my own code"
+on:
+  pull_request:
+    paths:
+      - my_test_code/**
+      
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Copy Repository Contents
+        uses: actions/checkout@main   
+   
+      - name: Running python script
+        run: |
+          pip install pytest
+          pytest my_test_code/test_1.py
+        shell: python
