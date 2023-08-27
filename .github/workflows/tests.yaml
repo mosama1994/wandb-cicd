@@ -23,10 +23,11 @@ jobs:
         with:
           environment-file: test_example/conda-environment.yaml
           environment-name: course
-          cache-env: true
+          cache-environment: true
           cache-downloads: true
           
-      - run: |
+      - name: Running Tests
+        run: |
           micromamba activate course
           pip install -U pytest
           pytest test_example/
