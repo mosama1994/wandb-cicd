@@ -16,6 +16,6 @@ jobs:
    
       - name: Running python script
         run: |
-          pip install -r my_test_code/requirements.txt
+          pip install -U pytest
           pytest my_test_code/
         shell: python
